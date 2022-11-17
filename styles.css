@@ -1,0 +1,104 @@
+/* === Variables === */
+:root {
+    --white: #FFFFFF;
+    --dark: #242424;
+    --light: #EEEEEE;
+    --hard-gray: #555555;
+    --light-gray: #B9B9B9;
+    --light-pink: #C44E8E;
+    --hard-pink: #8E3B68;
+}
+
+/* === Globals === */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    font-size: 1.6rem;
+    background-color: var(--white);
+    font-family: Helvetica, sans-serif;
+    padding: 0;
+}
+
+h1, 
+h2, 
+h3 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* === Generals === */
+.content {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.logo {
+    color: var(--hard-pink);
+    font-weight: bold;
+}
+
+.logo span {
+    font-weight: lighter;
+}
+
+/* === Navegation === */
+.navbar {
+    padding: 2rem 0;
+    -webkit-box-shadow: 0px 3px 3px -1px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 3px 3px -1px rgba(0,0,0,0.45);
+    box-shadow: 0px 3px 3px -1px rgba(0,0,0,0.45);
+}
+
+.navbar img {
+    width: 3rem;
+}
+
+.navbar-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-items nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-items ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-items li {
+    transition: color .4s ease-in-out;
+    color: var(--light-gray);
+}
+
+.navbar-items li:hover {
+    cursor: pointer;
+    color: var(--hard-gray);
+}
