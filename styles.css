@@ -7,6 +7,8 @@
     --light-gray: #B9B9B9;
     --light-pink: #C44E8E;
     --hard-pink: #8E3B68;
+    --helvetica: Helvetica, sans-serif;
+    --alexandria: 'Alexandria', sans-serif;;
 }
 
 /* === Globals === */
@@ -24,7 +26,7 @@ body {
     font-size: 16px;
     font-size: 1.6rem;
     background-color: var(--white);
-    font-family: Helvetica, sans-serif;
+    font-family: var(--helvetica);
     padding: 0;
 }
 
@@ -56,6 +58,7 @@ img {
 
 .logo {
     color: var(--hard-pink);
+    font-family: var(--alexandria);
     font-weight: bold;
 }
 
@@ -118,8 +121,20 @@ button {
 .search-button {
     position: relative;
     top: 0;
-    left: 21%;
+    left: 20%;
 }
+
+/* --- Titles ---*/
+.main-title {
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 2rem;   
+    color: var(--light-pink);
+    font-weight: bold;
+    font-size: 4rem;
+    font-family: var(--alexandria);
+}
+
 
 /* === Navegation === */
 .navbar {
@@ -169,4 +184,7 @@ button {
     color: var(--hard-gray);
 }
 
-
+/* === Content === */
+.gaceta {
+    text-align: center;
+}
