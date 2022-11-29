@@ -8,13 +8,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100;400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
     <header class="navbar">
         <div class="content navbar-items">
             <a href="/" class="logo">    
-                <h1>Del<span>Río</span></h1>
+                <h1>Del<span>Rio</span></h1>
             </a>
 
             <nav>
@@ -36,40 +36,15 @@
         </div>
     </header>
 
+
     <div class="container">
+        <form class="form-card login-card content"> 
+            <h2 class="main-title secondary-title">Iniciar Sesión</h2>       
+            <input class="global-input" placeholder="email@example.com" type="email" />
+            <input class="global-input" placeholder="Password" type="password" />
 
-        <div>
-            <div class="main-hero-content">
-
-                    <input type="text" class="search-input" placeholder="Ada Lovelace" />    
-                    <button class="main-button search-button">Búscar</button>
-
-            </div>
-        </div>
-        <section class="content gaceta">
-            <h2 class="main-title">Gaceta</h2>
-            <div>
-                <img src="https://bidi.uam.mx/images/slider/bidi/9abril21_coursera.jpg" />
-            </div>
-        </section>
-
-        <section class="content recomendatios">
-            <h2 class="main-title">Recomendaciones</h2>
-            <div>
-                <div class="item-card">
-                    <img src="https://m.media-amazon.com/images/I/51AILCYmA6L.jpg" />
-                </div>
-                <div  class="item-card">
-                    <img src="https://m.media-amazon.com/images/I/51AILCYmA6L.jpg" />
-                </div>
-                <div  class="item-card">
-                    <img src="https://m.media-amazon.com/images/I/51AILCYmA6L.jpg" />
-                </div>
-                <div  class="item-card">
-                    <img src="https://m.media-amazon.com/images/I/51AILCYmA6L.jpg" />
-                </div>
-            </div>
-        </section>
+            <button class="main-button big-button">Iniciar Sesión</button>
+        </form>
 
         <div class="footer">
             <div class="footer-top">
@@ -84,6 +59,6 @@
             </div>
         </div>
     </div>
-    <script type="module" src="./app/app.js"></script>
+    <script type="module" src="../app/app.js"></script>
 </body>
 </html>

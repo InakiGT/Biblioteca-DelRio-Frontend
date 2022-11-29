@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca DelRio</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="content navbar-items">
+            <a href="/" class="logo">    
+                <h1>Del<span>Rio</span></h1>
+            </a>
+
+            <nav>
+                <ul>
+                    <li>Videos</li>
+                    <li>Libros</li>    
+                    <li>Tesis</li>
+                    <li>Revistas</li>
+                </ul>
+                <ul>
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/3917/3917754.png" />
+                    </li>
+                    <li>
+                        <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" />
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="container">
+    <div class="board-container">
+
+            <div class="side-navbar">
+                <nav>
+                    <ul>
+                        <li><a>Usuarios</a></li>
+                        <li><a>Libros</a></li>
+                        <li><a>Revistas</a></li>
+                        <li><a>Vídeos</a></li>
+                        <li><a>Tesis</a></li>
+                        <li><a>Biografías</a></li>
+                        <li><a>Gaceta</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <section class="board">
+                <div>
+                    <h2 class="centered-subtitle">Editar Usuario</h2>
+                    <form class="form-card upsert-card content board-form-card"> 
+                        <div>
+                            <label>Correo:</label><br>
+                            <input class="global-input upsert-input" placeholder="221302210@cua.uam.mx" type="email" />
+                        </div> 
+                        <div>
+                            <label>Contraseña:</label><br>
+                            <input class="global-input upsert-input" placeholder="Password" type="password" />
+                        </div>
+                        <div>
+                            <label>Role:</label><br>
+                            <select class="global-input upsert-input">
+                                <option value="admin">Administrador</option>
+                                <option value="academic">Académico</option>
+                            </select>
+                        </div>
+            
+                        <button class="main-button big-button">Editar</button>
+                    </form>
+                </div>
+            </section>
+            
+        </div>
+            <div class="footer">
+                <div class="footer-top">
+                    <div class="content">
+                        <a href="/" class="logo">
+                            <p>Del<span>Río</span></p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p class="content">Biblioteca Lázaro Cárdenas del Río</p>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="../app/app.js"></script>
+    </body>
+    </html>
