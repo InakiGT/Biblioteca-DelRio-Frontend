@@ -1,1 +1,1 @@
-console.log("Hello world");
+import { petitionGet } from './petitions';
