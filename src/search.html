@@ -39,38 +39,20 @@
     <div class="container">
         
         <div class="search-hero-content">
-                <input type="text" class="search-input" placeholder="Ada Lovelace" />    
-                <button class="main-button search-button">Búscar</button>
+                <input type="text" class="search-input" placeholder="Ada Lovelace" id="search-input" />    
+                <button class="main-button search-button" id="search-button">Búscar</button>
         </div>
 
         
-        <section class="content">
+        <section class="content" id="recomendations">
             <h2 class="subtitle">Te sugerimos</h2>
-            <div class="recomendation-card"> 
-                <div>
-                    <p class="subtitle">Pablo Picasso</p>
-                    <p class="card-text">Spanish artist. Picasso, the most prolific and famous artist of 
-                        his time, was crucial to the development of modern art. </p>
-                        <a class="simple-button" href="">Ver más</a>
-                    </div>
-                    <img src="https://www.biografiasyvidas.com/monografia/picasso/fotos/picasso_420.jpg" />
-                </div>
-            </section>
-            
-        <section class="content">
-            <h2 class="subtitle">Resultados</h2>
-            <p class="results-info">Mostrando <span>1 - 10</span> de <span>1</span> resultados</p>
-            <div class="result">
-                <div class="result-title">
-                    <p class="result-type">Libro</p>
-                    <p class="result-name">Picasso</p>
-                </div>
-                <p class="result-text">Victoria Charles. New York : Parkstone International. 2008. eBook. Language: Spanish ,
-                    Base de datos: eBook Academic Collection (EBSCOhost)</p>
-                <a class="simple-button" href="">Descubrir</a>
-            </div>
         </section>
-
+            
+        <section class="content results" id="results">
+            <h2 class="subtitle">Resultados</h2>
+            <p class="results-info">Mostrando <span>1 - 10</span> de <span id="results-number">0</span> resultados</p>
+            
+        </section>
 
         <div class="footer">
             <div class="footer-top">
@@ -85,6 +67,7 @@
             </div>
         </div>
     </div>
-    <script type="module" src="../app/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="../app/search.js"></script>
 </body>
 </html>
