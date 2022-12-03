@@ -88,6 +88,10 @@ p {
     text-align: center;
 }
 
+.mb-10 {
+    margin-bottom: 10rem;
+}
+
 /* --- Inputs --- */
 
 input {
@@ -144,7 +148,6 @@ input {
 }
 
 .material-hero {
-    background-image: url('./images/d40d6b9befce8647d124ac2eef401e77.png');
     height: 40vh;
 }
 
@@ -157,9 +160,9 @@ input {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
     font-weight: bold;
-    gap: 2rem;
+    gap: 4rem;
 }
 
 .material-hero-content img {

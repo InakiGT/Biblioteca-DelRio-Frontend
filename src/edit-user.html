@@ -14,7 +14,7 @@
     <header class="navbar">
         <div class="content navbar-items">
             <a href="/" class="logo">    
-                <h1>Del<span>Rio</span></h1>
+                <h1>Del<span>Río</span></h1>
             </a>
 
             <nav>
@@ -39,21 +39,21 @@
 
     <div class="container">
         <h2 class="centered-subtitle">Editar Usuario</h2>
-        <form class="form-card upsert-card content"> 
+        <form class="form-card upsert-card content mb-10" id="edit-user-form"> 
             <div>
                 <label>Nombre:</label><br>
-                <input class="global-input upsert-input" placeholder="Nombre" />
+                <input class="global-input upsert-input" placeholder="Nombre" id="username" />
             </div> 
             <div>
                 <label>Contraseña:</label><br>
-                <input class="global-input upsert-input" placeholder="Password" type="password" />
+                <input class="global-input upsert-input" placeholder="Password" type="password" id="password" />
             </div>
             <div>
                 <label>Confirmar contraseña:</label><br>
-                <input class="global-input upsert-input" placeholder="Confirmar password" type="password" />
+                <input class="global-input upsert-input" placeholder="Confirmar password" type="password" id="confirm-password" />
             </div>
 
-            <button class="main-button big-button">Editar</button>
+            <button class="main-button big-button" type="submit">Editar</button>
         </form>
 
         <div class="footer">
@@ -69,6 +69,7 @@
             </div>
         </div>
     </div>
-    <script type="module" src="../app/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="../app/editUser.js"></script>
 </body>
 </html>
