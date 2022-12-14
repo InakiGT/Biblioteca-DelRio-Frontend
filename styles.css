@@ -49,6 +49,10 @@ a {
     padding: 0;
 }
 
+a:hover {
+    cursor: pointer;
+}
+
 ul {
     list-style: none;
     margin: 0;
@@ -64,7 +68,23 @@ p {
     margin: 0;
 }
 
+button {
+    background: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
 /* === Generals === */
+.flex-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .content {
     max-width: 120rem;
     margin: 0 auto;
@@ -86,6 +106,14 @@ p {
 
 .center-items {
     text-align: center;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mb-5 {
+    margin-bottom: 5rem;
 }
 
 .mb-10 {
@@ -162,6 +190,7 @@ input {
     align-items: center;
     justify-content: flex-start;
     font-weight: bold;
+    color: var(--light);
     gap: 4rem;
 }
 
@@ -246,6 +275,10 @@ button {
     font-size: 1.7rem;
 }
 
+.close-button {
+    width: 2rem;
+}
+
 /* --- Titles ---*/
 .main-title {
     text-align: center;
@@ -280,6 +313,14 @@ button {
 .board-title {
     color: var(--dark);
     font-size: 3rem;
+    text-transform: capitalize;
+}
+
+.card-title {
+    color: var(--light-pink);
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
 /* --- Cards --- */
@@ -365,6 +406,72 @@ button {
     cursor: pointer;
 }
 
+.summary-card {
+    display: none;
+    background-color: var(--white);
+    width: 70rem;
+    height: 40rem;
+    padding: 2rem 8rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -20rem; /* Negative half of height. */
+    margin-left: -35rem; /* Negative half of width. */
+    -webkit-box-shadow: 0px 4px 11px -3px rgba(0,0,0,0.58);
+    -moz-box-shadow: 0px 4px 11px -3px rgba(0,0,0,0.58);
+    box-shadow: 0px 4px 11px -3px rgba(0,0,0,0.58);
+}
+
+.summary-card .close-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.summary-card-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.summary-card-container img {
+    -webkit-box-shadow: 0px 4px 11px -3px rgba(0,0,0,0.18);
+    -moz-box-shadow: 0px 4px 11px -3px rgba(0,0,0,0.18);
+    box-shadow: 0px 4px 11px -3px rgba(0,0,0,0.18);
+    width: 15rem;
+}
+
+.summary-card-container h3 {
+    margin-top: 0;
+}
+
+.summary-card-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+}
+
+.summary-card-content p
+.summary-card-content button {
+    margin-bottom: .8rem;
+}
+
+.summary-card-content button {
+    padding: 0;
+}
+
+.error-card {
+    width: 50rem;
+    margin: 0 auto;
+    padding: 2rem 3rem;
+    background-color: var(--error);
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
 
 /* === Navegations === */
 .navbar {
@@ -381,6 +488,21 @@ button {
 
 .navbar img {
     width: 3rem;
+}
+
+.nav-element {
+    text-decoration: none;
+    color: var(--light-gray);
+    transition: color .4s ease-in-out;
+}
+
+.nav-element:hover {
+    cursor: pointer;
+    color: var(--hard-gray);
+}
+
+.navbar a:hover {
+    cursor: pointer;
 }
 
 .navbar-items {
@@ -405,20 +527,13 @@ button {
 
 .navbar-items li {
     font-size: 2rem;
-    transition: color .4s ease-in-out;
-    color: var(--light-gray);
-}
-
-.navbar-items li:hover {
-    cursor: pointer;
-    color: var(--hard-gray);
 }
 
 /* --- side-navbar --- */
 .side-navbar {
     background-color: var(--hard-pink);
     width: 25%;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
     font-size: 2.2rem;
     color: var(--light);
@@ -426,9 +541,11 @@ button {
     align-items: center;
     justify-content: space-around;
     font-weight: bold;
+    display: block;
 }
 
 .side-navbar ul {
+    margin-top: 11rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -437,6 +554,7 @@ button {
 
 .side-navbar a {
     transition: color .3s ease-in;
+    color: var(--light);
 }
 
 .side-navbar a:hover {
@@ -593,4 +711,16 @@ button {
 
 .results {
     margin-bottom: 10rem;
+}
+
+.options-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.logout {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem auto 10rem auto;
 }

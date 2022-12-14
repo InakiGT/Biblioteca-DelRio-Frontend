@@ -2,11 +2,11 @@ import { getQueryParams } from './helpers.js';
 import { petitionGet } from './petitions.js';
 import { config } from './config.js';
 
-const nameSearched = getQueryParams(window.location.href).name;
+const materialSearched = getQueryParams(window.location.href).type;
 const searchInput = document.getElementById('search-input');
 const searchButton = document.getElementById('search-button');
 const resultsNumber = document.getElementById('results-number');
-searchInput.value = nameSearched;
+searchInput.value = "";
 
 searchButton.addEventListener('click', () => {
     const value = searchInput.value;
@@ -17,45 +17,6 @@ searchButton.addEventListener('click', () => {
     window.location.replace(`${config.url}/src/search.html?name=${value}`);
 });
 
-const createBiographyCard = data => {
-
-    const section = document.getElementById('recomendations');
-
-    const cardNode = document.createElement('div');
-    cardNode.className = "recomendation-card";
-
-    const contentNode = document.createElement('div');
-
-    const resultTitle = document.createElement('p');
-    const resultTitleContent = document.createTextNode(data.title);
-    resultTitle.className = "subtitle";
-    resultTitle.appendChild(resultTitleContent);
-    
-
-    const resultContent = document.createElement('p');
-    const resultContentContent = document.createTextNode(data.description);
-    resultContent.className = "card-text";
-    resultContent.appendChild(resultContentContent);
-
-    const link = document.createElement('a');
-    const linkContent = document.createTextNode('Ver más');
-    link.appendChild(linkContent);
-    link.className = "simple-button";
-    link.href = `${config.url}/src/element.html?id=${data.id}`;
-
-    contentNode.appendChild(resultTitle);
-    contentNode.appendChild(resultContent);
-    contentNode.appendChild(link);
-
-    const img = document.createElement('img');
-    img.src = data.front_page;
-
-    cardNode.appendChild(contentNode);
-    cardNode.appendChild(img);
-
-    section.appendChild(cardNode);
-
-}
 
 const createResultCard = data => {
 
@@ -98,7 +59,7 @@ const createResultCard = data => {
 }
 
 const busqueda = async () => {
-    const result = await petitionGet(`/material?name=${nameSearched}`);
+    const result = await petitionGet(`/${materialSearched}`);
 
     const resultNumberNode = document.createTextNode(result.data.length);
     resultsNumber.appendChild(resultNumberNode);

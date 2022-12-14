@@ -19,24 +19,28 @@
 
             <nav>
                 <ul>
-                    <li>Videos</li>
-                    <li>Libros</li>    
-                    <li>Tesis</li>
-                    <li>Revistas</li>
+                    <li><a href="./material.html?type=videos" class="nav-element">Videos</a></li>
+                    <li><a href="./material.html?type=libros" class="nav-element">Libros</a></li>    
+                    <li><a href="./material.html?type=tesis" class="nav-element">Tesis</a></li>
+                    <li><a href="./material.html?type=revistas" class="nav-element">Revistas</a></li>
                 </ul>
                 <ul>
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/3917/3917754.png" />
+                        <a href="/">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3917/3917754.png" />
+                        </a>
                     </li>
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" />
+                        <a href="./login.html">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" />
+                        </a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <div class="container">
+    <div class="container flex-wrapper background-card">
 
         <div class="material-hero" id="hero">
             <div class="material-hero-content content">
@@ -51,11 +55,30 @@
         <section class="content main-content">
             <h2 class="subtitle">Descripción:</h2>
             <p class="content-text" id="description"></p>
-            <p class="tag">Tipo material <span id="format"></span></p>
+            <p class="tag">Tipo material: <span id="format"></span></p>
         </section>
 
         <div class="content center-items mb-10">
             <button class="main-button big-button" id="button">Obtener Material</button>
+        </div>
+
+        <div class="summary-card" id="card">
+            <button id="close" class="close-container">
+                <img class="close-button" src="https://freesvg.org/img/1544641784.png" />
+            </button>
+            <div class="summary-card-container" id="card">
+                <h3 class="main-title">Resumen</h3>
+                <div class="summary-card-content" id="qr">
+                    <img id="front" />
+                    <div>
+                        <p class="card-title" id="title2"></p>
+                        <p id="content"></p>
+                        <a class="simple-button" id="download">Descargar</a>
+                        <br />
+                        <button class="simple-button" id="prestamo">Solicitar Préstamo</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="footer">
@@ -71,6 +94,7 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module" src="../app/element.js"></script>
 </body>

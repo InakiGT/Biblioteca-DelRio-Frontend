@@ -54,17 +54,63 @@
                         <li><a href="./board.html?type=tesis">Tesis</a></li>
                         <li><a href="./board.html?type=biografias">Biografías</a></li>
                         <li><a href="./board.html?type=gaceta">Gaceta</a></li>
-                        <li><a href="./board.html?type=registros">Registros</a></li>
                     </ul>
                 </nav>
             </div>
             
             <section class="board" id="board">
-                <div class="board-top" id="board-top">
-                    <a class="main-button table-button green-button" id="create-button">Nuevo</a>
-                    <h2 class="board-title" id="board-title"></h2>
+                <div class="board-top">
+                    
+                    <h2 class="board-title mb-2">Crear Revista</h2>
                 </div>
                 <div id="board-content">
+                    <div id="err" class="mb-2"></div>
+                    <form class="form-card upsert-card content mb-10" id="create-form" name="revistas"> 
+                        <div>
+                            <label>Título:</label><br>
+                            <input class="global-input upsert-input" placeholder="Ada Lovalece" id="title" name="title" />
+                        </div> 
+                        <div>
+                            <label>Descripción:</label><br>
+                            <input class="global-input upsert-input" placeholder="" type="text" id="description" name="description" />
+                        </div>
+                        <div>
+                            <label>Editorial:</label><br>
+                            <input class="global-input upsert-input" placeholder="DeBolsillo" type="text" id="editorial" name="editorial" />
+                        </div>
+                        <div>
+                            <label>Autor:</label><br>
+                            <input class="global-input upsert-input" placeholder="Stephen King" type="text" id="autor" name="autor" />
+                        </div>
+                        <div>
+                            <label>Idioma:</label><br>
+                            <input class="global-input upsert-input" placeholder="Español" type="text" id="language" name="language" />
+                        </div>
+                        <div>
+                            <label>Portada:</label><br>
+                            <input class="global-input upsert-input" placeholder="https://delrio.com/imagen" type="url" id="frontPage" name="frontPage" />
+                        </div>
+                        <div>
+                            <label>Imagen de Fondo:</label><br>
+                            <input class="global-input upsert-input" placeholder="https://delrio.com/imagen" type="url" id="backgroundImg" name="backgroundImg" />
+                        </div>
+                        <div>
+                            <label>Url del descarga:</label><br>
+                            <input class="global-input upsert-input" placeholder="https://delrio.com/" type="url" id="contentUrl" name="contentUrl" />
+                        </div>
+                        <div>
+                            <label>Volumén:</label><br>
+                            <input class="global-input upsert-input" placeholder="10" type="number" id="existence" name="vol" />
+                        </div>
+                        <div>
+                            <label>Formato:</label><br>
+                            <select class="global-input upsert-input" placeholder="Formato" id="format" name="format">
+                                <option value="PDF">PDF</option>
+                                <option value="EPUB">EPUB</option>
+                            </select>
+                        </div>
+                        <button class="main-button big-button" type="submit">Crear</button>
+                    </form>
                 </div>
             </section>
             
@@ -83,6 +129,6 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script type="module" src="../app/board.js"></script>
+    <script type="module" src="../app/ createFromBoard.js"></script>
     </body>
     </html>

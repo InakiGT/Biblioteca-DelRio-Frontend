@@ -5,6 +5,7 @@ const username = document.getElementById('username');
 const password = document.getElementById('password');
 const confirmPassword = document.getElementById('confirm-password');
 const userId = await localStorage.getItem('userId');
+const logoutButton = document.getElementById('logout');
 
 const getUserData = async () => {
     
@@ -53,6 +54,13 @@ form.addEventListener('submit', async e => {
 
     window.location.href = '/';
 
+});
+
+logoutButton.addEventListener('click', async () => {
+    await localStorage.removeItem('id');
+    await localStorage.removeItem('token');
+
+    window.location.href = "/";
 });
 
 getUserData();

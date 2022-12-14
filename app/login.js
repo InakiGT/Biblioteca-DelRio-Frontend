@@ -1,8 +1,21 @@
 import { petitionPost } from './petitions.js';
+import { showError } from './helpers.js';
+
 const loginForm = document.getElementById('login-form');
 
 if(await localStorage.getItem('token')) {
-    window.location.href = "./edit-user.html";
+    window.location.href = "./edit-users.html";
+}
+
+const errors = () => {
+    const node = document.getElementById('error');
+    node.style = "display: block";
+    showError( node, "Algo salió mal" );
+    
+    setTimeout(() => {
+        node.style = "display: none";
+        node.innerHTML = "";
+    }, 5000);
 }
 
 loginForm.addEventListener('submit', async e => {
@@ -13,7 +26,7 @@ loginForm.addEventListener('submit', async e => {
     const password = document.getElementById('password').value;
 
     if( !email.trim()|| !password.trim() ) {
-        console.log("Cannot do that");
+        errors();
         return;
     }
 
@@ -26,7 +39,7 @@ loginForm.addEventListener('submit', async e => {
     const result = await petitionPost( "/auth/login", data ) || false;
 
     if( !result || !result.data.token ) {
-        console.log("Datos invalidos");
+        errors();
         return;
     }
     

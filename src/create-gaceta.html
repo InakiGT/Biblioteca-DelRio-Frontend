@@ -54,17 +54,29 @@
                         <li><a href="./board.html?type=tesis">Tesis</a></li>
                         <li><a href="./board.html?type=biografias">Biografías</a></li>
                         <li><a href="./board.html?type=gaceta">Gaceta</a></li>
-                        <li><a href="./board.html?type=registros">Registros</a></li>
                     </ul>
                 </nav>
             </div>
             
             <section class="board" id="board">
-                <div class="board-top" id="board-top">
-                    <a class="main-button table-button green-button" id="create-button">Nuevo</a>
-                    <h2 class="board-title" id="board-title"></h2>
+                <div class="board-top">
+                    
+                    <h2 class="board-title mb-2">Crear Gaceta</h2>
                 </div>
                 <div id="board-content">
+                    <div id="err" class="mb-2"></div>
+                    <form class="form-card upsert-card content mb-10" id="create-form" name="gaceta"> 
+                        <div>
+                            <label>Título:</label><br>
+                            <input class="global-input upsert-input" placeholder="Mi gaceta" id="username" name="title" />
+                        </div> 
+                        <div>
+                            <label>Imagen:</label><br>
+                            <input class="global-input upsert-input" placeholder="http://img.com/mi_imagen.jpg" type="url" id="password" name="imageUrl" />
+                        </div>
+            
+                        <button class="main-button big-button" type="submit">Crear</button>
+                    </form>
                 </div>
             </section>
             
@@ -83,6 +95,6 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script type="module" src="../app/board.js"></script>
+    <script type="module" src="../app/ createFromBoard.js"></script>
     </body>
     </html>

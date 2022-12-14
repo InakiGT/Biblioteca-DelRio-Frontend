@@ -41,7 +41,7 @@ const getGaceta = async () => {
 }
 
 const getRecomendations = async () => {
-    const result = await petitionGet('libros');
+    const result = await petitionGet('libros?limit=3');
 
     result.data.forEach(element => {
         createRecomendationCard(element);

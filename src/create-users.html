@@ -54,17 +54,40 @@
                         <li><a href="./board.html?type=tesis">Tesis</a></li>
                         <li><a href="./board.html?type=biografias">Biografías</a></li>
                         <li><a href="./board.html?type=gaceta">Gaceta</a></li>
-                        <li><a href="./board.html?type=registros">Registros</a></li>
                     </ul>
                 </nav>
             </div>
             
             <section class="board" id="board">
-                <div class="board-top" id="board-top">
-                    <a class="main-button table-button green-button" id="create-button">Nuevo</a>
-                    <h2 class="board-title" id="board-title"></h2>
+                <div class="board-top">
+                    
+                    <h2 class="board-title mb-2">Crear Usuario</h2>
                 </div>
                 <div id="board-content">
+                    <div id="err" class="mb-2"></div>
+                    <form class="form-card upsert-card content mb-10" id="create-form" name="users"> 
+                        <div>
+                            <label>Nombre:</label><br>
+                            <input class="global-input upsert-input" placeholder="Pedro" id="username" name="username" />
+                        </div> 
+                        <div>
+                            <label>Email:</label><br>
+                            <input class="global-input upsert-input" placeholder="correo@cua.uam.mx" type="email" id="email" name="email" />
+                        </div>
+                        <div>
+                            <label>Password:</label><br>
+                            <input class="global-input upsert-input" placeholder="Password" type="password" id="password" name="password" />
+                        </div>
+                        <div>
+                            <label>Role:</label><br>
+                            <select class="global-input upsert-input" placeholder="Password" type="password" id="role" name="role">
+                                <option value="admin">Admin</option>
+                                <option value="academico">Academico</option>
+                            </select>
+                        </div>
+            
+                        <button class="main-button big-button" type="submit">Crear</button>
+                    </form>
                 </div>
             </section>
             
@@ -83,6 +106,6 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script type="module" src="../app/board.js"></script>
+    <script type="module" src="../app/ createFromBoard.js"></script>
     </body>
     </html>

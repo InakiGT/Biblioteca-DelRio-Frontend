@@ -5,7 +5,7 @@ const getToken = async () => {
     return token;
 }
 
-const petitionGet = async ( endpoint, id ) => {
+const petitionGet = async ( endpoint, id, _ ) => {
     try {
 
         if(!endpoint) {
@@ -22,7 +22,7 @@ const petitionGet = async ( endpoint, id ) => {
         return response;
 
     } catch(err) {
-        console.log(err);
+        return err;
     }
 }
 
@@ -87,6 +87,12 @@ const petitionDelete = async ( endpoint, id ) => {
     } catch(err) {
         console.log(err);
     }
+}
+
+export default {
+    petitionGet,
+    petitionPatch,
+    petitionPost
 }
 
 export { 

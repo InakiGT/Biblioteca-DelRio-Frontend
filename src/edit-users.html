@@ -19,17 +19,21 @@
 
             <nav>
                 <ul>
-                    <li>Videos</li>
-                    <li>Libros</li>    
-                    <li>Tesis</li>
-                    <li>Revistas</li>
+                    <li><a href="./material.html?type=videos" class="nav-element">Videos</a></li>
+                    <li><a href="./material.html?type=libros" class="nav-element">Libros</a></li>    
+                    <li><a href="./material.html?type=tesis" class="nav-element">Tesis</a></li>
+                    <li><a href="./material.html?type=revistas" class="nav-element">Revistas</a></li>
                 </ul>
                 <ul>
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/3917/3917754.png" />
+                        <a href="/">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3917/3917754.png" />
+                        </a>
                     </li>
                     <li>
-                        <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" />
+                        <a href="./login.html">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" />
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -39,7 +43,7 @@
 
     <div class="container">
         <h2 class="centered-subtitle">Editar Usuario</h2>
-        <form class="form-card upsert-card content mb-10" id="edit-user-form"> 
+        <form class="form-card upsert-card content" id="edit-user-form"> 
             <div>
                 <label>Nombre:</label><br>
                 <input class="global-input upsert-input" placeholder="Nombre" id="username" />
@@ -55,7 +59,9 @@
 
             <button class="main-button big-button" type="submit">Editar</button>
         </form>
-
+        <div class="logout mb-10">
+            <button class="simple-button" id="logout">Cerrar Sesión</button>
+        </div>
         <div class="footer">
             <div class="footer-top">
                 <div class="content">
