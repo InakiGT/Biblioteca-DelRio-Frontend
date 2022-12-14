@@ -15,7 +15,7 @@ const setForm = values => {
     createForm.childNodes.forEach( item => {
         if(item.tagName === "DIV") {
             item.childNodes.forEach( input => {
-                if(input.tagName === "INPUT") {
+                if(input.tagName === "INPUT" && input.id !== "password") {
                     input.value = values[input.name];
                 }
             })
@@ -37,7 +37,9 @@ const getData = () => {
     const obj = {};
 
     for (const pair of formData.entries()) {
-        obj[pair[0]] = pair[1];
+        if(pair[1] !== "") {
+            obj[pair[0]] = pair[1];
+        }
     }
 
     return obj;
