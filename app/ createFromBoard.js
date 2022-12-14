@@ -48,7 +48,7 @@ const sendForm = async e => {
 
     const data = getData();
 
-    const result = await petitions[petitionType]( petitionType === "petitionPost" ? endpoint : "material", id ? id : data, data );
+    const result = await petitions[petitionType]( (petitionType === "petitionPost" || endpoint === "users") ? endpoint : "material", id ? id : data, data );
 
     if(!result) {
         const node = document.getElementById("err");
